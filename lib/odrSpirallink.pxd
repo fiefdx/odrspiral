@@ -6,4 +6,4 @@ Created on 2018-03-21
 ''' 
 
 cdef extern from "odrSpiral.h":
-    void odrSpiral(double* xyt, double s, double cDot);
+    void odrSpiral(double s, double cDot, double *x, double *y, double *t);

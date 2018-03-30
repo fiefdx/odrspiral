@@ -9,5 +9,5 @@ cimport numpy as np
 
 cimport odrSpirallink
 
-def spiral(np.ndarray[np.float64_t, ndim=1] xyt, s, cDot):
-    odrSpirallink.odrSpiral(<double*> xyt.data, <double> s, <double> cDot)
+def spiral(s, cDot, np.ndarray[np.float64_t, ndim=1] x, np.ndarray[np.float64_t, ndim=1] y, np.ndarray[np.float64_t, ndim=1] t):
+    odrSpirallink.odrSpiral(<double> s, <double> cDot, <double*> x.data, <double*> y.data, <double*> t.data)

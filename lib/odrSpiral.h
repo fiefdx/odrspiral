@@ -32,4 +32,4 @@
 * @param t      tangent direction at s [rad]
 */
 
-void odrSpiral( double *xyt, double s, double cDot );
+extern void odrSpiral( double s, double cDot, double *x, double *y, double *t );

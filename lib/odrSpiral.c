@@ -229,12 +229,9 @@ static void fresnel( double xxa, double *ssa, double *cca )
 * @param t      tangent direction at s [rad]
 */
 
-void odrSpiral( double *xyt, double s, double cDot )
+void odrSpiral( double s, double cDot, double *x, double *y, double *t )
 {
     double a;
-    double* x = &xyt[0];
-    double* y = &xyt[1];
-    double* t = &xyt[2];
 
     a = 1.0 / sqrt( fabs( cDot ) );
     a *= sqrt( M_PI );

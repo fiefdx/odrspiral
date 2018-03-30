@@ -17,9 +17,8 @@ LOG = logging.getLogger(__name__)
 def spiral(s, cdot, x, y, t):
     s = np.double(s)
     cdot = np.double(cdot)
-    x = np.double(x)
-    y = np.double(y)
-    t = np.double(t)
-    xyt = np.ascontiguousarray([x, y, t], dtype = np.float64)
-    codrspiral.spiral(xyt, s, cdot)
-    return xyt[0], xyt[1], xyt[2]
+    x = np.ascontiguousarray([np.double(x)], dtype = np.float64)
+    y = np.ascontiguousarray([np.double(y)], dtype = np.float64)
+    t = np.ascontiguousarray([np.double(t)], dtype = np.float64)
+    codrspiral.spiral(s, cdot, x, y, t)
+    return x, y, t
